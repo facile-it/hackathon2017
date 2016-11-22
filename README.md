@@ -13,13 +13,9 @@ make build
 ```
 make serve
 ```
-And then visit it at `http://<host>:9001`
+And then visit it at `http://<host>:9001` while running
 
-To kill the development server issue a
-
-```
-make kill
-```
+To kill the development server issue a simple CTRL-C on the same terminal 
 
 # Deploy
 

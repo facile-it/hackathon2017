@@ -71,7 +71,7 @@ $(document).ready(function() {
         }
     });
 
-    $('.mobile-menu, nav a').click(function(e) {
+    $('.mobile-menu, nav a.a-to-local-anchor').click(function(e) {
         e.preventDefault();
         $('nav, .mobile-menu').toggleClass('open');
     });
