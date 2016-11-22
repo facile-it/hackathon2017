@@ -1,0 +1,249 @@
+html, body { position: relative; }
+
+section {
+
+    /*width: 100%;
+    /*height: 100%;*/
+    position:relative;
+    clear: both;
+    background-color: transparent;
+    padding:3em 20%;
+    box-sizing: border-box;
+
+    &.alternative-style {
+        padding:8em 20%
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    &:not(.first_section) h1 {
+        font-family:'Roboto Condensed';
+        text-transform: uppercase;
+        color:rgba(227,71,19,1);
+    }
+
+    h2 {
+        font-size: 24px;
+        margin: 30px auto 20px;
+    }
+
+    .row {
+        padding:100px 100px 100px 150px;
+        margin: 0 auto;
+        //max-width: 75em;
+        position: relative;
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+        box-sizing: border-box;
+
+
+        &.inverted {
+            background-color:rgba(255,255,255,1);
+            box-shadow: 0 40px 100px rgba(0,0,0,.2);
+            color:#000;
+            padding-bottom:200px
+            /*
+            position: absolute;
+             left: 50%;
+             top: 50%;
+             transform: translate(-50%, -50%); /* Yep! */
+            //box-shadow: 0 40px 100px rgba(0,0,0,.2);
+        }
+
+
+        & .ZZ_icon {
+            font-size:140px;
+            position:absolute;
+            left:-80px!important;
+            top:30%;
+            color: rgba(227,71,19,1);
+
+        }
+
+        & .ZZ_icon_laureato {
+            font-size:220px!important;
+            left:-140px!important;
+            top:15%
+        }
+
+    }
+
+
+}
+a {
+    color: $primary-color;
+    font-weight:bold;
+    @include transition(all, .2s, ease-in-out);
+    &:hover {
+        color: $primary-color-dark;
+    }
+
+}
+#map-canvas {
+    min-height: 350px;
+    margin: 20px 0 0;
+    padding: 0;
+    backgorund-color:#f8f8f8;
+    position: relative; overflow: hidden;
+
+}
+#per-chi,
+#disclaimer {
+    /*
+    background: url('../images/bg2.jpg') 50% 50% repeat fixed;
+    background-size: cover;
+    background-attachment:fixed;
+    */
+    background:transparent;
+}
+.pattern {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+    @include transform(200px,200px);
+}
+.pattern {
+    background: url('../images/pattern3.png') 100% 0 repeat fixed;
+    background-size: cover;
+    background-attachment:fixed;
+
+}
+#chi-siamo {
+    margin-top:150px!important
+}
+.first_section {
+    /*
+    background: url('../images/bg2.jpg') 50% 0 repeat-y fixed;
+    background-size: cover;
+    text-align: left;
+    */
+
+    padding:200px 15% 150px;
+    color:$color;
+
+    h1,h2 {
+        color: white;
+        font-weight:bold;
+        font-size: 65px;
+        font-family: 'Roboto Condensed'
+    }
+    h2 {
+        font-weight:normal;
+        font-size:30px;
+        text-transform: uppercase;
+    }
+    p {
+        padding:50px 0;
+        text-align:left;
+        font-size:25px;
+        line-height:35px
+    }
+    .row {
+        padding:0;
+
+    }
+}
+.marker {
+    background-color:rgba(227,71,19,.7);
+    padding:0 5px;
+    &.big {
+            padding:5px 20px
+    }
+
+}
+.HT_minibull { margin-top: 15px; }
+.HT_minibull li {
+    margin: 5px 0 10px;
+    padding-left: 14px;
+    line-height:normal;
+    position:relative;
+}
+
+.HT_minibull li::before {
+	content: "\2022";
+	color: #f60;
+	display: inline-block;
+	font-size: 35px;
+	left: 0;
+	position: absolute;
+	line-height: 0;
+	top: 13px;
+	left: -3px;
+}
+.go-button {
+    display:inline-block;
+    color:#fff;
+    position:relative;
+    z-index:9;
+
+    @include transition(all, .25s, ease-in-out);
+
+    &:hover {
+        @include scale(1.3,1.3);
+        box-shadow: -10px 10px 43px rgba(0,0,0,1);
+        color:#fff
+    }
+}
+.first_section .go-button {
+    background-color:$primary-button-color;
+    background-color: rgba(0,0,0,.5);
+    border:3px solid #fff;
+    padding:30px 40px;
+    font-size:30px;
+    margin:20px auto;
+    min-width: 6em;
+}
+.alternative-style .go-button {
+    background-color:rgba(227,71,19,1);
+    padding:25px 30px;
+    font-size:25px;
+    position:absolute;
+    right:-50px;
+    bottom:55px
+
+}
+.floating-button {
+    height:50px;
+    width:50px;
+    line-height:55px;
+    position:fixed;
+    bottom:50px;
+    right:50px;
+    padding:0;
+    text-align:center;
+    background-color:#fff;
+    @include transform(200px,200px);
+    @include transition(all, .8s, ease-in-out);
+    @include border-radius(100%);
+
+    color: $primary-color-dark;
+
+    box-shadow: 0 16px 20px rgba(0, 0, 0, 0.1);
+    z-index: 99999;
+    border:3px solid #dedede;
+    font-size:25px;
+    &.hide {
+        bottom:-200px;
+        visibility:hidden;
+        display:block!important
+    }
+
+    &:hover > i::before {
+        line-height:50px;
+        display:block;
+        -webkit-animation:4s top-scroll .5s ease infinite;
+        -moz-animation:4s top-scroll .5s ease infinite;
+        -ms-animation:4s top-scroll .5s ease infinite;
+        animation:4s top-scroll .5s ease infinite;
+    }
+}

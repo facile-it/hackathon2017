@@ -1,0 +1,81 @@
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+       -moz-transition: $transition-property $transition-time $method;
+        -ms-transition: $transition-property $transition-time $method;
+         -o-transition: $transition-property $transition-time $method;
+            transition: $transition-property $transition-time $method;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur $color;
+       -moz-box-shadow: inset $top $left $blur $color;
+            box-shadow: inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+       -moz-box-shadow: $top $left $blur $color;
+            box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+}
+
+@mixin scale($x, $y) {
+    -webkit-transform: scale($x, $y);
+       -moz-transform: scale($x, $y);
+        -ms-transform: scale($x, $y);
+         -o-transform: scale($x, $y);
+            transform: scale($x, $y);
+}
+
+@mixin transform($x,$y) {
+    -webkit-transform: translateZ($x);
+       -moz-transform: translateZ($x);
+        -ms-transform: translateZ($x);
+         -o-transform: translateZ($x);
+            transform: translateZ($x);
+}
+
+@mixin animation ($delay, $duration, $animation) {
+    -webkit-animation: $animation $duration $delay forwards;
+       -moz-animation: $animation $duration $delay forwards;
+         -o-animation: $animation $duration $delay forwards;
+            animation: $animation $duration $delay forwards;
+}
+
+@-webkit-keyframes animatedBackground {
+    0%     { @include scale (1 , 1);     }
+    100%   { @include scale (1.1 , 1.1); }
+}
+
+@-moz-keyframes animatedBackground {
+    0%     { @include scale (1 , 1);     }
+    100%   { @include scale (1.1 , 1.1); }
+}
+@keyframes animatedBackground {
+    0%     { @include scale (1 , 1);     }
+    100%   { @include scale (1.1 , 1.1); }
+}
+@mixin line {
+    display: inline-block;
+    width: $button-size;
+    height: 4px;
+    background: $primary-color-dark;
+    border-radius: $button-size/14;
+    transition: $transition;
+}
+
+
+$parallax__layers: 3;
+
+@for $i from 0 through $parallax__layers {
+  $x: ($parallax__layers - $i) / 2;
+  .parallax__layer__#{$i}{
+     transform: translateZ(-100 * $x#{px}) scale($x + 1);
+  }
+}
