@@ -40,6 +40,39 @@
 		.pattern{
 			z-index:-1;
 		}
+		.giurato_luca{
+			width:100%;
+			min-height: 250px;
+		}
+		.giurato_luca p.descrizione{
+			font-size: 14px;
+			padding:0;
+		}
+		.giurato_luca img{
+			padding: 5px 8px;
+		}
+		.giurato_luca.pari img{
+			float: left;
+		}
+		.giurato_luca.dispari img{
+			float: right;
+		}
+		/* Smartphones (portrait and landscape) ----------- */
+			@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+			/* Styles */
+				.giurato_luca{
+					width:100%;
+					text-align: center;
+					min-height: 250px;
+				}
+				.giurato_luca p.descrizione{
+					
+					text-align: justify;
+				}
+				.giurato_luca.pari img, .giurato_luca.dispari img{
+					float: none;
+				}
+			}
 		</style>
     </head>
     <body id="home">
@@ -62,7 +95,7 @@
 				<a href="#premi">Premi</a>
 				<a href="#faq">FAQ</a>
 				<a href="#location">Location</a>
-                <a href="http://hackathon2015.facile.it/">Edizione 2015</a>
+                <a href="#giuria">Giuria</a>
             </nav>
         </header>
         <div class="bg"  data-parallax="scroll " data-speed="0.1">
@@ -293,7 +326,89 @@
                 </div>
             </section>
 
-ù            <footer  data-speed="5" data-type="backgroud">
+            <section id="giuria"  class="alternative-style">
+                <div class="row inverted">
+                    <i class="ZZ_icon ZZ_icon_tag"></i>
+                    <h1>La giuria</h1>
+                    <p>
+                        Facile.it ha scelto di affidarsi ad alcuni professionisti del settore per comporre la giuria del
+                        FacileHack. I giurati sono stati scelti per le loro approfondite competenze e la comprovata
+                        esperienza sul campo, così da garantire una valutazione approfondita dei progetti presentati.
+                    </p>
+                    
+                    <div class="giurato_luca dispari">
+					<h2>Cristina Bianchini - Vodafone Italia</h2>
+                    
+					<img src="images/bianchini.png" height="210" />
+                    <p class="descrizione">
+                        Laureata in Ingegneria Elettronica, con una lunga esperienza nelle Telecomunicazioni. 
+                        In Vodafone da 1995, ha rivestito differenti ruoli di responsabilità nell’Ingegneria dei Servizi 
+                        di Rete, nelle Operations, nel Demand management dell’IT e di servizi per il mercato mobile e fisso. 
+                        Oggi responsabile dell’area Governance & Demand e della Innovation Factory nella 
+                        Direzione Technology di Vodafone Italia.
+                    </p>
+                    </div>
+					<div class="giurato_luca pari">
+                    <h2>Fabio Lalli - IQUII</h2> 
+                    <img src="images/lalli.jpg" height="210">
+                    <p class="descrizione">
+                        Amministratore Delegato di IQUII, digital consulting company specializzata in progetti mobile, 
+                        wearable/IoT e strategie digitali, parte del Gruppo Multinazionale Be. 
+                        Da oltre 15 anni svolge consulenza ICT, aerospaziale, banking. 
+                        Ha progettato piattaforme di enterprise network 2.0, applicazioni mobile e sistemi di social gaming. 
+                        Negli ultimi anni ha ricoperto il ruolo di responsabile dei sistemi informativi in diverse 
+                        aziende di consulenza e system integration. 
+                        Appassionato di comunicazione, marketing e new media, nel 2010 fonda il network Indigeni Digitali. 
+                        Ha collaborato al libro "Enteprise 2.0" e scritto "Geolocalizzazione e Mobile Marketing", 
+                        e "Wearable". 
+                        Professore all'Università di Perugia in Human-Computer Interaction, 
+                        insegna al ilSole24ore, IED, IULM e Digital Accademia.
+                    </p>
+					</div>
+                    <div class="giurato_luca dispari">
+                    <h2>Deborah Raccagni - Bocconi</h2> 
+                    <img src="images/raccagni.jpg" height="210">
+                    <p class="descrizione">
+                        Lecturer in Marketing, Università Bocconi. Assistente alla Direzione MSc in Marketing Management, 
+                        affiliata al CERMES, Centro di Ricerca su Marketing e Servizi e Affiliate Professor nell’Area 
+                        Marketing SDA Bocconi. 
+                        E’ stata Marketing Adjunct Professor presso Franklin College University (Lugano-CH) (2011-2013); 
+                        Assegnista di Ricerca presso Università degli Studi Roma Tre e presso Università Bocconi (2007-2010). 
+                        Aree di interesse scientifico: Customer Knowledge Management; Internet Marketing; Innovation Management.  
+                    </p>
+					</div>
+					<div class="giurato_luca pari">
+                    <h2>Moreno Soppelsa - Giornalista tech</h2> 
+                    <img src="images/soppelsa.jpg" height="210">
+                    <p class="descrizione">
+                        Moreno Soppelsa è un giornalista specializzato in nuove tecnologie. 
+                        Da quelle che ormai non sono più nuove, come Internet al quale ha dedicato nel 1999 il libro 
+                        Manuale di Internet, fino alle più recenti evoluzioni della manifattura additiva, spiegate nel 
+                        libro Fabbricare con la stampa 3D recentemente uscito per i tipi di Tecniche Nuove. 
+                        Per questa casa editrice scrive di tecnologia su varie riviste mensili. 
+                        Qualche articolo lo pubblica sul suo blog www.soppelsa.it.
+                    </p>
+                    </div>
+					<div class="giurato_luca dispari">
+                    <h2>Mauro Giacobbe - Facile.it</h3>
+                    <img src="images/mauro_giacobbe.jpg" height="210">
+                    <p class="descrizione">
+                        Nato a Savona nel 1978, Mauro Giacobbe si laurea con lode in Economia e Commercio all’Università 
+                        degli Studi di Genova per poi conseguire un Master in Business Administration presso SDA Bocconi 
+                        di Milano.
+                        Dopo quattro anni di esperienza nel settore bancario retail, è entrato a far parte della società 
+                        di consulenza The Boston Consulting Group, dove si è occupato soprattutto del ramo bancario e 
+                        assicurativo partecipando a svariati progetti.<br>
+                        Per Facile.it segue il lancio dell’attività di Seguros.es in Spagna per poi tornare in Italia, 
+                        nel 2012, col ruolo di Head of Insurance Italy. Nello stesso anno entra anche a far parte del 
+                        consiglio di amministrazione di Facile.it.
+                        Da gennaio 2014 è Amministratore Delegato dell’azienda.
+                    </p>
+					</div>
+                </div>
+            </section>
+
+            <footer  data-speed="5" data-type="backgroud">
                 <div class="row">
                     Copyright © 2017 Facile.it S.p.A.
                     <ul class="social_list">
