@@ -19,11 +19,8 @@ To kill the development server issue a simple CTRL-C on the same terminal
 
 # Deploy
 
-To deploy to the gh-pages you have to issue the following commands:
+To deploy to the gh-pages, after committing you have to issue the following commands:
 
 ```
-make build
-git add .
-git commit -m 'Your commit message`
-make deploy
+make build deploy
 ```
