@@ -254,7 +254,7 @@ a {
     color: #000000;
     background-color: rgba(243,156,18,.88);
     border-color: rgba(243,156,18,.88);
-    padding:4px 10px;
+    padding:2px 6px;
     margin-bottom:10px;
 }
 .avviso-metro strong {
@@ -263,4 +263,9 @@ a {
 .avviso-metro a {
     color:#000000;
     font-weight:400;
+}
+@media screen and (max-width: 640px) {
+    .avviso-metro {
+        margin-top:10px;
+    }
 }
