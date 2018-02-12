@@ -1,5 +1,5 @@
 {
-  "name": "hackathon2015",
+  "name": "hackathon2017",
   "version": "1.0.0",
   "description": "",
   "main": "Gruntfile.js",
@@ -21,11 +21,11 @@
     "grunt-cli": "^0.1.13",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-connect": "^0.10.1",
-    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-cssmin": "^0.12.3",
     "grunt-contrib-sass": "^0.9.2",
-    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-uglify": "^0.9.2",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-sass": "^1.0.0"
+    "grunt-sass": "^1.2.1"
   }
 }
